@@ -1,3 +1,5 @@
+import time
+
 #알고리즘 5.12 피보나치수열(분할정복) [순환구조]                                  #시간복잡도 : O(2^n)
 def fib(n):
     if n == 0:
@@ -61,6 +63,17 @@ def multMat(A, B):
 
 num = int(input("피보나치수열을 계산할 숫자를 입력하시오 > "))
 
+start_time = time.time()
 print("      순환구조 피보나치수열 : ", fib(num))
+end_time = time.time()
+print(f"      순환구조 실행 시간: {end_time - start_time}초")
+
+start_time = time.time()
 print("      반복구조 피보나치수열 : ", fib_iter(num))
+end_time = time.time()
+print(f"      반복구조 실행 시간: {end_time - start_time}초")
+
+start_time = time.time()
 print(" 행렬 거듭제곱 피보나치수열 : ", fib_mat(num))
+end_time = time.time()
+print(f" 행렬 거듭제곱 실행 시간: {end_time - start_time}초")
