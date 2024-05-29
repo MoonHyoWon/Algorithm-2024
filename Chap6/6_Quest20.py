@@ -20,7 +20,7 @@ def lp_search(key):
         if table[id] == None:
             return None
         if table[id] == key:
-            return table[id]
+            return id
         id = (id + 1 + M) % M
         count -= 1
     return None
@@ -40,3 +40,5 @@ def lp_delete(key):
 print("  최초:", table)
 lp_insert(27); print(" 27 삽입: ", table)
 lp_insert(130); print("130 삽입: ", table)
+print(" 27의 인덱스 탐색: ", lp_search(27))
+print("130의 인덱스 탐색: ", lp_search(130))
